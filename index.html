@@ -128,10 +128,198 @@
           <hr>
         </div>
         <div>
-          <div class="lg:flex justify-between gap-4 items-center mt-[48px]">
-           <div class="py-2 lg:w-[50%] rounded-md">
-            <!-- ................... -->
+          
+          <div class="lg:flex justify-between gap-x-10 items-center mt-[48px]">
+            <div class="left-side w-[75%]">
+              <div class="flex justify-between gap-4 items-center">
+                <div class="flex justify-between gap-2 items-center" >
+                  <div>
+                    <img src="images/bus-icon.png" alt="">
+                  </div>
+                  <div>
+                    <h3>Greenline Paribahan</h3>
+                    <p>Coach-009-WEB ! AC_Business</p>
+                  </div>
+                </div>
+                <div>
+                  <button><p><span id="available-seats">40</span> Seats left</p></button>
+                </div>
+              </div>
+              <div class="flex justify-between gap-4 items-center py-6">
+                <div>
+                    <div>
+                      <p>Route</p>
+                    </div>
+                </div>
+                <div>
+                  <p>Dhaka - Sylhet</p>
+                </div>
+              </div>
+              <hr>
+              <div class="flex justify-between gap-4 items-center py-6">
+                <div>
+                    <div>
+                      <p>Route</p>
+                    </div>
+                </div>
+                <div>
+                  <p>Dhaka - Sylhet</p>
+                </div>
+              </div>
+              <hr>
+           
+            </div>
+            <div class="right-side w-[25%]">
+              <img src="images/fare.png" alt="">
+              <h3><span>550</span> Taka</h3>
+              <p>Per Seat</p>
+            </div>
+          </div><!-- // end  -->
+
+          <div class="flex justify-between gap-6">
+
+            <div class="left-side w-[70%]">
+
+              <h3>Select Your Seat</h3>
+
+              <div class="flex justify-between gap-4 items-center">
+                <div class="flex justify-between gap-4">
+                  <div><img src="images/seat-gray.png" alt=""></div>
+                  <div><p>Available</p></div>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <div><img src="images/seat-green-filled.png" alt=""></div>
+                  <div><p>Available</p></div>
+                </div>
+              </div>
+
+              <div class="items-end">
+                <img src="images/Group 56.png" alt="">
+              </div>
+              <!-- ............ -->
+              <div id="seats-container">
+                <div class="flex justify-between py-4">
+                  <p>A</p>
+                  <div class="seat btn py-2 px-6" data-row="A" data-seat="1">A1</div>
+                  <div class="seat btn  py-2 px-6" data-row="A" data-seat="2">A1</div>
+                  <div class="seat btn  py-2 px-6" data-row="A" data-seat="3">A1</div>
+                  <div class="seat btn  py-2 px-6" data-row="A" data-seat="4">A1</div>
+                </div>
+                <div class="flex justify-between py-4">
+                  <p>B</p>
+                  <div class="seat btn  py-2 px-6" data-row="B" data-seat="1">B1</div>
+                  <div class="seat btn  py-2 px-6" data-row="B" data-seat="2">B1</div>
+                  <div class="seat btn  py-2 px-6" data-row="B" data-seat="3">B1</div>
+                  <div class="seat btn  py-2 px-6" data-row="B" data-seat="4">B1</div>
+                </div>
+                <div class="flex justify-between py-4">
+                  <p>C</p>
+                  <div class="seat btn  py-2 px-6" data-row="C" data-seat="1">C1</div>
+                  <div class="seat btn  py-2 px-6" data-row="C" data-seat="2">C1</div>
+                  <div class="seat btn  py-2 px-6" data-row="C" data-seat="3">C1</div>
+                  <div class="seat btn  py-2 px-6" data-row="C" data-seat="4">C1</div>
+                </div>
+                <div class="flex justify-between py-4">
+                  <p>D</p>
+                  <div class="seat btn  py-2 px-6" data-row="D" data-seat="1">D1</div>
+                  <div class="seat btn  py-2 px-6" data-row="D" data-seat="2">D1</div>
+                  <div class="seat btn  py-2 px-6" data-row="D" data-seat="3">D1</div>
+                  <div class="seat btn  py-2 px-6" data-row="D" data-seat="4">D1</div>
+                </div>
+                <div class="flex justify-between py-4">
+                  <p>E</p>
+                  <div class="seat btn  py-2 px-6" data-row="E" data-seat="1">E1</div>
+                  <div class="seat btn  py-2 px-6" data-row="E" data-seat="2">E1</div>
+                  <div class="seat btn  py-2 px-6" data-row="E" data-seat="3">E1</div>
+                  <div class="seat btn  py-2 px-6" data-row="E" data-seat="4">E1</div>
+                </div>
+                <div class="flex justify-between py-4">
+                  <p>F</p>
+                  <div class="seat btn  py-2 px-6" data-row="F" data-seat="1">F1</div>
+                  <div class="seat btn  py-2 px-6" data-row="F" data-seat="2">F1</div>
+                  <div class="seat btn  py-2 px-6" data-row="F" data-seat="3">F1</div>
+                  <div class="seat btn  py-2 px-6" data-row="F" data-seat="4">F1</div>
+                </div>
+                <div class="flex justify-between py-4">
+                  <p>G</p>
+                  <div class="seat btn  py-2 px-6" data-row="G" data-seat="1">G1</div>
+                  <div class="seat btn  py-2 px-6" data-row="G" data-seat="2">G1</div>
+                  <div class="seat btn  py-2 px-6" data-row="G" data-seat="3">G1</div>
+                  <div class="seat btn  py-2 px-6" data-row="G" data-seat="4">G1</div>
+                </div>
+                <div class="flex justify-between py-4">
+                  <p>H</p>
+                  <div class="seat  btn py-2 px-6" data-row="H" data-seat="1">H1</div>
+                  <div class="seat btn " data-row="H" data-seat="2">H1</div>
+                  <div class="seat btn  py-2 px-6" data-row="H" data-seat="3">H1</div>
+                  <div class="seat btn " data-row="H" data-seat="4">H1</div>
+                </div>
+                <div class="flex justify-between py-4">
+                  <p>I</p>
+                  <div class="seat btn  py-2 px-6" data-row="I" data-seat="1">I1</div>
+                  <div class="seat btn  py-2 px-6 " data-row="I" data-seat="2">I1</div>
+                  <div class="seat btn  py-2 px-6" data-row="I" data-seat="3">I1</div>
+                  <div class="seat btn py-2 px-6 " data-row="I" data-seat="4">I1</div>
+                </div>
+                <div class="flex justify-between py-4">
+                  <p>J</p>
+                  <div class="seat py-2 px-6" data-row="J" data-seat="1">J1</div>
+                  <div class="seat py-2 px-6" data-row="J" data-seat="2">J1</div>
+                  <div class="seat py-2 px-6" data-row="J" data-seat="3">J1</div>
+                  <div class="seat py-2 px-6" data-row="J" data-seat="4">J1</div>
+                </div>
+              </div>
+           
+          </div>
+
+            <div class="left-side w-[30%]">
+              <h3>Select Your Seat</h3> 
+              <hr>
+              <div class="flex justify-between">
+                <div><p>Seat</p></div>
+                <div><p>Class</p></div>
+                <div><p>Price</p></div>
+              </div>
+              <div class="flex justify-between">
+                <div><p>C2</p></div>
+                <div><p>Economoy</p></div>
+                <div><p>550</p></div>
+              </div>
+              <div class="flex justify-between">
+                <div><p>C2</p></div>
+                <div><p>Economoy</p></div>
+                <div><p>550</p></div>
+              </div>
+              <hr>
+              <div class="flex justify-between">
+                <div><p>Total Price:</p></div>
+                
+                <div><p><span id="total-price">0</span></p></div>
+              </div>
+              <div class="flex justify-between py-10">
+                <div><input type="text" id="coupon-code"></div>
+                <div><button id="apply-coupon" disabled>Apply Coupon</button></div>
+              </div>
+              <div class="grid gap-6">
+                <div>
+                  <input type="text" id="name" placeholder="Name">
+                </div>
+                <div>
+                  <input type="text" id="phone" placeholder="Phone">
+                </div>
+                <div>
+                  <input type="text" id="email" placeholder="Email"> <br>
+                </div>
+                <div>
+                  <button id="next-page" disabled>Next</button>
+                </div>
+              </div>
  
+            </div>
+
+          </div>
+
+
    
   
 </div>
