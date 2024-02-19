@@ -198,15 +198,23 @@
               </div>
               <!-- ............ -->
               <div id="seats-container">
-                <div class="flex justify-between py-4 row">
-                  <p>A</p>
-                  <button class="seat seatB btn py-2 px-6"><p>A1</p></button>
-                  <button class="seat seatB btn py-2 px-6"><p>A2</p></button>
-                  <button class="seat seatB btn py-2 px-6"><p>A3</p></button>
-                  <button class="seat seatB btn py-2 px-6"><p>A4</p></button>
+                  <div class="flex justify-between py-4 row">
+                    <p>A</p>
+                    <button class="seat btn py-2 px-6" onclick="selectSeat('A1')"><p>A1</p></button>
+                    <button class="seat btn py-2 px-6" onclick="selectSeat('A2')"><P>A2</P></button>
+                    <button class="seat btn py-2 px-6" onclick="selectSeat('A3')"><p>A3</p></button>
+                    <button class="seat btn py-2 px-6" onclick="selectSeat('A4')"><p>A4</p></button>
+
+                    
+                </div>
+                  <div class="flex justify-between py-4 row">
+                    <p>A</p>
+                    <button class="seat  btn py-2 px-6" onclick="selectSeat('B1')">B1</button>
+                    <button class="seat  btn py-2 px-6" onclick="selectSeat('B2')">B2</button>
+                    <button class="seat  btn py-2 px-6" onclick="selectSeat('B3')">B3</button>
+                    <button class="seat  btn py-2 px-6" onclick="selectSeat('B4')">B4</button>
+                </div>
               </div>
-           
-          </div>
 
             <div class="left-side w-[30%]">
               <h3>Select Your Seat</h3> 
@@ -229,14 +237,15 @@
               <hr>
               <div class="flex justify-between">
                 <div><p>Total Price:</p></div>
-                
+               
                 <div><p><span id="total-price">0</span></p></div>
 
-                <div id="disount-container">
-
-                </div>
-                
               </div>
+              <div class="flex justify-between py-2 text-xl">
+                <div><p>Discount:</p></div>
+               <div><p> <span id="disount-container"></span></p></div>
+              </div>
+
               <div class="flex justify-between py-10">
                 <div><input type="text" id="coupon-code"></div>
                 <div><button class="btn" id="apply-coupon" >Apply Coupon</button></div>
@@ -244,7 +253,7 @@
               <div class="flex justify-between">
                 <div><p>Grand Total</p></div>
                 
-                <div><p><span id="grand-total">0</span></p></div>
+                <div><p><span id="grand-total"></span></p></div>
               </div>
               <div class="grid gap-6" id="input-fields">
                 <div>
