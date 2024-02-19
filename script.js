@@ -1,21 +1,100 @@
 // let selectedSeats = [];
-// let totalPrice = 0;
+let totalPrice = 0;
 // let couponDiscount = 0;
-
+let titleCount = 1;
 
 const seats = document.querySelectorAll(".seat");
 // console.log(seats);
 
 for (let index = 0; index < seats.length; index++) {
-    const seat = seats[index];
-    // console.log(seat);
+  const seat = seats[index];
+  // console.log(seat);
 
-    seat.addEventListener("click", function(){
-      const seatName = seat.querySelector("p").innerText;
-      console.log(seatName);
-    });
+  seat.addEventListener("click", function () {
+
+    const seatName = seat.querySelector("p").innerText;
+    // console.log(seatName);
+
+    const ticketName = document.getElementById("tName");
+
+    const pName = parseFloat(document.getElementById("pName").innerText);
+    // console.log(pName);
+
+    
+    const p = document.createElement("p");
+    p.innerText = titleCount + ". " + seatName;
+    ticketName.appendChild(p);
+
+    titleCount++;
+
+    const p2 = document.createElement("p");
+    p2.innerText =  pName;
+    // pName.appendChild(p);
+  
+    //total price
+
+    totalPrice += pName;
+    document.getElementById("total-price").innerText = totalPrice ;
+
+    // console.log(totalPrice);
      
+  });
+
 }
+
+const btn = document.getElementById("apply-coupon");
+ 
+btn.addEventListener("click", function(){
+  
+
+  //get data from input
+  const couponeData = document.getElementById("coupon-code").value;
+  const coupone
+
+      if (code === 'NEW15') {
+        couponDiscount = totalPrice * 0.15;
+      } else if (code === 'Couple20') {
+        couponDiscount = totalPrice * 0.20;
+      } else {
+        alert("Invalid coupon code.");
+        return;
+      }
+
+
+});
+
+// const dataTakes = document.querySelectorAll(".dataTake");
+// // console.log(dataTakes);
+
+// for (let index = 0; index < dataTakes.length; index++) {
+//   const dataTake = dataTakes[index];
+//   // console.log(dataTake);
+
+//   dataTake.addEventListener("click", function () {
+
+//     const tName = document.getElementById("tName");
+//     console.log(tName);
+
+//     // const p = document.createElement("p");
+    // p.innerText = tName;
+    // tName.appendChild(p);
+
+    // const cName = document.getElementById("cName");
+
+    // const p2 = document.createElement("p");
+    // p2.innerText = cName;
+    // cName.appendChild(p);
+
+    // const pName = document.getElementById("pName");
+
+    // const p3 = document.createElement("p");
+    // p3.innerText = pName;
+    // pName.appendChild(p);
+
+//   });
+
+// }
+
 
 // function selectSeat(seat) {
 //   if (selectedSeats.includes(seat)) {

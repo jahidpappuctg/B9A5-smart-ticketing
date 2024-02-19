@@ -201,8 +201,9 @@
                 <div class="flex justify-between py-4 row">
                   <p>A</p>
                   <button class="seat seatB btn py-2 px-6"><p>A1</p></button>
-                  <button class="seat seatB btn py-2 px-6"><p>A1</p></button>
-                  <button class="seat seatB btn py-2 px-6"><p>A1</p></button>
+                  <button class="seat seatB btn py-2 px-6"><p>A2</p></button>
+                  <button class="seat seatB btn py-2 px-6"><p>A3</p></button>
+                  <button class="seat seatB btn py-2 px-6"><p>A4</p></button>
               </div>
            
           </div>
@@ -215,12 +216,12 @@
                 <div><p>Class</p></div>
                 <div><p>Price</p></div>
               </div>
-              <div class="flex justify-between">
-                <div><p>C2</p></div>
-                <div><p>Economoy</p></div>
-                <div><p>550</p></div>
+              <div class="flex justify-between dataTake">
+                <div id="tName">A1</div>
+                <div id="cName"> Economoy </div>
+                <div id="pName"> 550 </div>
               </div>
-              <div class="flex justify-between">
+              <div class="flex justify-between dataTake">
                 <div><p>C2</p></div>
                 <div><p>Economoy</p></div>
                 <div><p>550</p></div>
@@ -230,10 +231,15 @@
                 <div><p>Total Price:</p></div>
                 
                 <div><p><span id="total-price">0</span></p></div>
+
+                <div id="disount-container">
+
+                </div>
+                
               </div>
               <div class="flex justify-between py-10">
                 <div><input type="text" id="coupon-code"></div>
-                <div><button id="apply-coupon" disabled>Apply Coupon</button></div>
+                <div><button class="btn" id="apply-coupon" >Apply Coupon</button></div>
               </div>
               <div class="flex justify-between">
                 <div><p>Grand Total</p></div>
