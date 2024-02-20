@@ -2,18 +2,25 @@
 /*hero-area  */
 .hero-area{
         position: relative;
-    }
-    .hero-content{
-        display: grid;
-        text-align: center;
+        margin: 0 auto;
         background-image: url(Images/banner.png);
         background-repeat:no-repeat;
         background-size: cover;
         background-position: center;
+        text-align: center;
+    }
+    .hero-content{
+        display: grid;
+        text-align: center;
         padding: 160px 0;
         position: relative;
+        margin: 0 auto;
         
        
+    }
+
+    .bg{
+        
     }
     
     seat {

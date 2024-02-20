@@ -2,6 +2,7 @@ let selectedSeats = [];
 let totalPrice = 0;
 let couponDiscount = 0;
 let titleCount = 1;
+let totalSeat = 12;
 
 
 
@@ -52,23 +53,24 @@ const btn = document.getElementById("apply-coupon");
   const couponeData = document.getElementById("coupon-code").value;
   const couponCode = couponeData.split(" ").join("");
 
-  if (totalPrice >= 200) {
+  if (totalPrice >= 500) {
 
     if (couponCode === 'NEW15') {
       const discountElement = document.getElementById('disount-container');
       discountPrice = totalPrice * 0.15;
       discountElement.innerText = discountPrice
-
     } else if (couponCode === 'Couple20') {
       const discountElement = document.getElementById('disount-container');
       discountPrice = totalPrice * 0.20;
       discountElement.innerText = discountPrice;
 
-      //rest grand total
+      if(couponCode === 'NEW15' && couponCode === 'Couple20'){
+         document.getElementById("hide").hidden;
+      
+      //rest grand tota
+      
 
-      // Update grand total
-      const grandTotal = totalPrice - discountPrice;
-      document.getElementById('grand-total').innerText = `Grand Total: $${grandTotal}`;
+      
       // console.log(grandTotal);
 
     } else {
@@ -78,37 +80,51 @@ const btn = document.getElementById("apply-coupon");
     alert("Invalid coupon code");
     return;
   }
-
+  }
 });
 
 function selectSeat(seat) {
   if (selectedSeats.includes(seat)) {
-    // Seat already selected, deselect it
     selectedSeats = selectedSeats.filter(s => s !== seat);
-    totalPrice -= 550; // Assuming $550 per seat
+    // totalPrice -= 550; // 
   } else {
-    // Seat not selected, select it
     if (selectedSeats.length < 4) {
       selectedSeats.push(seat);
-      totalPrice += 550; // Assuming $550 per seat
+      // totalPrice += 550; // 
     } else {
       alert("You can only select up to 4 seats.");
     }
+    document.getElementById("selectedSeats").innerText = selectedSeats.length;
+    document.getElementById("total-seats").innerText = totalSeat - selectedSeats.length;
+
+
   }
   updateUI();
+
+  // document.getElementById('next-btn').disabled = selectedSeats.length === 0;
 }
  
 
+
 function updateUI() {
-  // Update seat colors
   const seats = document.querySelectorAll(".seat");
-  // console.log(seats);
  
   for (let i = 0; i < seats.length; i++) {
     if (selectedSeats.includes(seats[i].innerText)) {
       seats[i].style.backgroundColor = 'green';
     } else {
-      seats[i].style.backgroundColor = 'gray';
+      // seats[i].style.backgroundColor = 'gray';
     }
   }
+      
+  const grandTotal = totalPrice - couponDiscount;
+  document.getElementById('grand-total').innerText = grandTotal  ;
+
+ // Enable next button if at least one seat is selected
+
+ function proceedToNextPage() {
+  // Proceed to the next page (implementation required)
+}
+
+
 }
