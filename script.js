@@ -97,7 +97,10 @@ function selectSeat(seat) {
     document.getElementById("selectedSeats").innerText = selectedSeats.length;
     document.getElementById("total-seats").innerText = totalSeat - selectedSeats.length;
 
-
+    
+    const grandTotal = totalPrice - couponDiscount;
+    document.getElementById('grand-total').innerText = grandTotal  ;
+  
   }
   updateUI();
 
@@ -122,9 +125,13 @@ function updateUI() {
 
  // Enable next button if at least one seat is selected
 
- function proceedToNextPage() {
-  // Proceed to the next page (implementation required)
+
 }
 
+function proceedToNextPage() {
+  const homeSection = document.getElementById('hide');
+  homeSection.classList.add('hidden');
 
+  const removeSection = document.getElementById('show');
+  removeSection.classList.remove('hidden');
 }
